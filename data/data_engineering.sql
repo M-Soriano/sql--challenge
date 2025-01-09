@@ -12,7 +12,7 @@ CREATE TABLE titles (
 
 -- Creating  employees table
 CREATE TABLE employees(
-    emp_no INTEGER PRIMARY KEY,
+    emp_no INT PRIMARY KEY,
     emp_title_id VARCHAR(10) NOT NULL,
     birth_date DATE NOT NULL,
     first_name VARCHAR(50) NOT NULL,
@@ -24,8 +24,8 @@ CREATE TABLE employees(
 
 -- Creating  salaries table
 CREATE TABLE salaries(
-    emp_no INTEGER PRIMARY KEY,
-    salary NUMERIC(8,2) NOT NULL,
+    emp_no INT PRIMARY KEY,
+    salary DECIMAL(8,2) NOT NULL,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
