@@ -28,3 +28,12 @@ CREATE TABLE salaries(
     salary NUMERIC(8,2) NOT NULL,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
+
+-- Creating dept_emp table
+CREATE TABLE dept_emp (
+    emp_no INTEGER(10) PRIMARY KEY,
+    dept_no VARCHAR(10) NOT NULL,
+    FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+    FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
+);
+
