@@ -21,3 +21,10 @@ CREATE TABLE employees(
     hire_date DATE NOT NULL
     FOREIGN KEY (emp_title_id) REFERENCES title(title_id)
 );
+
+-- Creating  salaries table
+CREATE TABLE salaries(
+    emp_no INTEGER(10) PRIMARY KEY,
+    salary NUMERIC(8,2) NOT NULL,
+    FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+);
