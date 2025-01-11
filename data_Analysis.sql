@@ -14,4 +14,12 @@ JOIN employees e on dm.emp_no = e.emp_no;
 SELECT de.dept_no, e.emp_no, e.last_name, e.first_name, (SELECT dept_name FROM departments dt WHERE dt.dept_no=de.dept_no) as dept_name
 FROM  employees e
 JOIN dept_emp de on e.emp_no = de.emp_no;--- could also be inner join
+WHERE
+
+
+SELECT  e.first_name,  e.last_name, e.sex
+FROM  employees e
+WHERE first_name = 'Hercules' AND  last_name LIKE 'B%'
+
+SELECT
 
